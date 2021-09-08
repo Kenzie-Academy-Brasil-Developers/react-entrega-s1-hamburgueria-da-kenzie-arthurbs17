@@ -1,10 +1,12 @@
 import { useState } from "react";
+import "./index.css";
+import { FaSearch } from "react-icons/fa";
 
 const ShowProducts = ({ showProducts, showAllProducts }) => {
   const [filterProduct, setFilterProduct] = useState("");
 
   return (
-    <div>
+    <div className="search">
       <input
         className="inputSearch"
         type="text"
@@ -17,7 +19,7 @@ const ShowProducts = ({ showProducts, showAllProducts }) => {
           showProducts(filterProduct.toLowerCase());
         }}
       >
-        Procurar
+        <FaSearch />
       </button>
       <button
         className="showAll"

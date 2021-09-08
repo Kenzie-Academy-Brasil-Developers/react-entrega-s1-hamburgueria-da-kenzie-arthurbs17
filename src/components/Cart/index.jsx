@@ -1,9 +1,11 @@
+import "./index.css";
+import { MdRemoveShoppingCart } from "react-icons/md";
 const Cart = ({ list, removeProduct }) => {
   return (
     <div className="Cart">
       <h1>Carrinho</h1>
       {list.map((product, index) => (
-        <div key={index}>
+        <div key={index} className="item">
           <h3>{product.name}</h3>
           <h3>{product.price}</h3>
           <button
@@ -12,7 +14,7 @@ const Cart = ({ list, removeProduct }) => {
               removeProduct(index);
             }}
           >
-            Remover
+            <MdRemoveShoppingCart />
           </button>
         </div>
       ))}

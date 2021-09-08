@@ -1,9 +1,14 @@
 .product {
   list-style: none;
-  color: #f0f8ff;
   border: 2px dashed #f0f8ff;
   margin-bottom: 5px;
   padding-bottom: 10px;
+}
+
+.product img {
+  width: 90px;
+  height: 120px;
+  margin-top: 5px;
 }
 
 .buttonAdd {
@@ -15,4 +20,10 @@
   border-radius: 10px;
   font-size: 20px;
   color: #daa520;
+}
+
+@media screen and (min-width: 769px) {
+  .product {
+    width: 120px;
+  }
 }

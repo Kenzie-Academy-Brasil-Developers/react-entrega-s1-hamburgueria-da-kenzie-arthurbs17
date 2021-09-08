@@ -1,0 +1,23 @@
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.inputSearch {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  flex-basis: 100%;
+}
+
+.procurar {
+  padding: 5px;
+  width: 100px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.showAll {
+  width: 100px;
+  margin-top: 5px;
+}
