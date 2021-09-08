@@ -26,6 +26,13 @@ function App() {
     setCurrentSale([...currentSale, selectedProduct]);
   };
 
+  const removeProduct = (productId) => {
+    setCurrentSale([
+      ...currentSale.slice(0, productId),
+      ...currentSale.slice(productId + 1),
+    ]);
+  };
+
   const showProducts = (inputProduct) => {
     setFilteredProducts(
       products.filter((product) => product.name.toLowerCase() === inputProduct)
@@ -48,7 +55,7 @@ function App() {
         ) : (
           <MenuContainer list={products} handleClick={handleCLick} />
         )}
-        <Cart list={currentSale} />
+        <Cart list={currentSale} removeProduct={removeProduct} />
       </header>
     </div>
   );

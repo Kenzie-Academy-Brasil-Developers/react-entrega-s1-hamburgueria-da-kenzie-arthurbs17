@@ -1,4 +1,4 @@
-const Cart = ({ list }) => {
+const Cart = ({ list, removeProduct }) => {
   return (
     <div className="Cart">
       <h1>Carrinho</h1>
@@ -6,6 +6,13 @@ const Cart = ({ list }) => {
         <div key={index}>
           <h3>{product.name}</h3>
           <h3>{product.price}</h3>
+          <button
+            onClick={() => {
+              removeProduct(index);
+            }}
+          >
+            Remover
+          </button>
         </div>
       ))}
       <h3>
