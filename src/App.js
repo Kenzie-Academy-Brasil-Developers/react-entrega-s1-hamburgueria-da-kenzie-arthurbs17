@@ -45,7 +45,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <main className="App-header">
         <ShowProducts
           showProducts={showProducts}
           showAllProducts={showAllProducts}
@@ -56,7 +56,7 @@ function App() {
           <MenuContainer list={products} handleClick={handleCLick} />
         )}
         <Cart list={currentSale} removeProduct={removeProduct} />
-      </header>
+      </main>
     </div>
   );
 }

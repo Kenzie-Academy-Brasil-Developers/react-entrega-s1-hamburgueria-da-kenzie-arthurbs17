@@ -1,4 +1,5 @@
 import Product from "../Product";
+import "./index.css";
 
 const MenuContainer = ({ list, handleClick }) => {
   return (

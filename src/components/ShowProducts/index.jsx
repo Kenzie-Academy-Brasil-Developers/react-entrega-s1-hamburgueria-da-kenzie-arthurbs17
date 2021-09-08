@@ -6,11 +6,13 @@ const ShowProducts = ({ showProducts, showAllProducts }) => {
   return (
     <div>
       <input
+        className="inputSearch"
         type="text"
         value={filterProduct}
         onChange={(event) => setFilterProduct(event.target.value)}
       />
       <button
+        className="procurar"
         onClick={() => {
           showProducts(filterProduct.toLowerCase());
         }}
@@ -18,6 +20,7 @@ const ShowProducts = ({ showProducts, showAllProducts }) => {
         Procurar
       </button>
       <button
+        className="showAll"
         onClick={() => {
           showAllProducts();
         }}

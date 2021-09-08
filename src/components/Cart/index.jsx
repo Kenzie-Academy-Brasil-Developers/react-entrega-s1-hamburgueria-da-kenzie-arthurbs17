@@ -7,6 +7,7 @@ const Cart = ({ list, removeProduct }) => {
           <h3>{product.name}</h3>
           <h3>{product.price}</h3>
           <button
+            className="buttonRemove"
             onClick={() => {
               removeProduct(index);
             }}
