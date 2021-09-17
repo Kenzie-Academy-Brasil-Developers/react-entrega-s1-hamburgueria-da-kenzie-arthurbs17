@@ -11,7 +11,7 @@ const Cart = ({ list, removeProduct }) => {
           <button
             className="buttonRemove"
             onClick={() => {
-              removeProduct(index);
+              removeProduct(product.id);
             }}
           >
             <MdRemoveShoppingCart />

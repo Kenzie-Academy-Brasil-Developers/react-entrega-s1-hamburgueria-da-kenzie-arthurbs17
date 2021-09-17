@@ -61,14 +61,16 @@ function App() {
     const selectedProduct = products.find(
       (product) => product.id === productId
     );
-    setCurrentSale([...currentSale, selectedProduct]);
+    const verify = currentSale.find(
+      (product) => product.id === selectedProduct.id
+    );
+    if (verify === undefined) {
+      setCurrentSale([...currentSale, selectedProduct]);
+    }
   };
 
   const removeProduct = (productId) => {
-    setCurrentSale([
-      ...currentSale.slice(0, productId),
-      ...currentSale.slice(productId + 1),
-    ]);
+    setCurrentSale(currentSale.filter((prod) => prod.id !== productId));
   };
 
   const showProducts = (inputProduct) => {
